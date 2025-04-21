@@ -15,7 +15,7 @@ function Login() {
       .then((result) => {
         console.log(result);
         if (result.data === "Success!") {
-          navigate("/home");
+          navigate("/map");
         } else {
           alert(result.data);
         }
@@ -24,7 +24,7 @@ function Login() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
+    <div className="d-flex justify-content-center align-items-center vh-100">
       <div className="bg-white p-3 rounded w-25">
         <h2>Log In</h2>
         <form onSubmit={handleSubmit}>
