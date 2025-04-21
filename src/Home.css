@@ -1,0 +1,41 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #aad4e5;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #050dff);
+}
+
+.signup-link {
+  display: inline-block;
+  width: 50%;
+  border: 1px solid #ced4da; /* similar to Bootstrap's default border */
+  background-color: #f8f9fa; /* light background */
+  border-radius: 0; /* no rounding */
+  text-decoration: none;
+  color: inherit; /* inherit the text color */
+  padding: 0.5rem 1rem; /* optional padding for button feel */
+  text-align: center;
+  cursor: pointer;
+}
+
+.signup-link:hover {
+  background-color: #e2e6ea; /* subtle hover effect */
+}
+
+.read-the-docs {
+  color: #888;
+}

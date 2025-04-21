@@ -1,27 +1,22 @@
-import { useState } from "react";
-import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Menu from "./pages/Menu";
+import Map from "./pages/Map";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://duke.edu/" target="_blank">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/5352/5352118.png"
-            className="logo"
-            alt="Campus logo"
-          />
-        </a>
-      </div>
-      <h1>Rate My Campus</h1>
-      <div className="options">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/register" element={<Signup />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/map" element={<Map></Map>}></Route>
+        <Route path="/menu" element={<Menu></Menu>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
